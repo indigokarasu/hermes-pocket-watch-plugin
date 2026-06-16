@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "hermes-pocket-watch"
+version = "1.0.0"
+description = "Cron job monitor and maintainer for Hermes — schedule views, health dashboards, and maintenance tools"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Indigo Karasu", email = "mx.indigo.karasu@gmail.com"}
+]
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.100.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["hermes_pocket_watch*"]

@@ -1,0 +1,13 @@
+{
+  "name": "pocket-watch",
+  "label": "Pocket Watch",
+  "description": "Cron job monitor — daily/weekly/monthly schedule views, health dashboard, job maintenance",
+  "icon": "Clock",
+  "version": "1.0.0",
+  "tab": {
+    "path": "/pocket-watch",
+    "position": "after:skills"
+  },
+  "entry": "dist/index.js",
+  "api": "plugin_api.py"
+}
