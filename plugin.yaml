@@ -1,12 +1,6 @@
 name: pocket-watch
-version: "1.0.0"
+version: "1.0.1"
 description: "Cron job monitor and maintainer — schedule views, health dashboards, and maintenance tools for all Hermes cron jobs."
 source: https://github.com/indigokarasu/hermes-pocket-watch-plugin
 author: "Indigo Karasu (indigokarasu)"
 kind: standalone
-provides_hooks:
-  - on_session_start
-provides_tools:
-  - pocket_watch_status
-  - pocket_watch_jobs
-  - pocket_watch_timeline
