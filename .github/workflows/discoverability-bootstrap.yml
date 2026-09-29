@@ -1,21 +1,19 @@
 name: Repository discoverability bootstrap
 on:
+  workflow_dispatch:
   push:
-    branches: [main]
+    paths:
+      - .github/workflows/discoverability-bootstrap.yml
 permissions:
   contents: write
   issues: write
 jobs:
-  metadata:
+  discoverability:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
       REPO: ${{ github.repository }}
     steps:
-      - name: Repository description and topics
-        run: |
-          gh api --method PATCH "repos/$REPO" -f description='Pocket Watch plugin for Hermes Agent — time, timer, and temporal utility management with a lightweight dashboard.'
-          gh api --method PUT "repos/$REPO/topics" -H "Accept: application/vnd.github+json" -F 'names[]=dashboard' -F 'names[]=hermes-agent' -F 'names[]=plugin' -F 'names[]=python' -F 'names[]=time' -F 'names[]=timer' -F 'names[]=utilities'
       - name: Standard labels
         continue-on-error: true
         run: |
